@@ -3,55 +3,57 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 export interface INavbarButton {
   label: string;
-  link: string;
+  link?: string;
   options?: {
     label: string;
     icon?: IconType; //IconType es el tipo de dato que proporsiona react-icon
     link: string;
+    rel?: string;
+    target?: string;
   }[];
 }
 export const navbarButton: INavbarButton[] = [
   {
     label: "Inicio",
-    link: "",
+    link: "#",
   },
   {
     label: "Conocenos",
-    link: "",
+    link: "#",
   },
   {
     label: "Productos",
-    link: "",
+    link: "#",
   },
   {
     label: "Catalogo",
-    link: "",
     options: [
       {
         label: "Sahumerios",
-
-        link: "",
+        link: "#",
       },
       {
         label: "Porta Sahumerios",
-
-        link: "",
+        link: "#",
       },
     ],
   },
   {
     label: "Contacto",
-    link: "",
     options: [
       {
         label: "Facebook",
         icon: FaFacebookSquare,
-        link: "",
+        link: "https://web.facebook.com/profile.php?id=100070364314628",
+        rel: "noreferrer",
+        target: "_blank",
       },
       {
         label: "Instagram",
         icon: SiInstagram,
-        link: "",
+        link: "https://www.instagram.com/flor_de_loto_aromas_y_color?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        rel: "noreferrer",
+        target: "_blank",
       },
     ],
   },

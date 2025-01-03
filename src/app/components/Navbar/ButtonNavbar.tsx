@@ -20,7 +20,7 @@ export const ButtonNavbar: React.FC<INavbarButton> = (button) => {
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
-            className="flex font-textSecondary items-center justify-between w-full py-2 px-3 text-white md:border-0 md:p-0 md:w-auto hover:border-b hover:border-white"
+            className="flex !text-xl font-textSecondary  justify-between w-full py-2 px-3 text-white  md:p-0 md:w-auto hover:border-b hover:border-white"
             onClick={() => handleOpenDropdown(button.label)}
           >
             {button.label}
@@ -31,17 +31,20 @@ export const ButtonNavbar: React.FC<INavbarButton> = (button) => {
           {openDropdown && labelDropdown == button.label && (
             <div
               id="dropdownNavbar"
-              className="z-10 absolute top-12 font-normal bg-red-200 divide-y divide-gray-100   "
+              className="z-10 absolute top-10  md:top-14  font-normal bg-black divide-y divide-gray-100 flex justify-center  shadow shadow-gray-200 "
             >
               <ul
-                className="py-2 text-sm text-gray-700 "
+                className="py-2  text-white "
                 aria-labelledby="dropdownLargeButton"
               >
                 {button.options.map((option, index) => (
-                  <li key={index}>
+                  <li key={index} className="">
                     <a
-                      href="#"
-                      className="flex justify-center font-textSecondary items-center gap-2  px-4 py-2 hover:border-b hover:border-white"
+                      onClick={() => handleOpenDropdown(button.label)}
+                      href={option.link}
+                      rel={option.rel || undefined}
+                      target={option.target || undefined}
+                      className="flex justify-center font-textSecondary items-center gap-2  px-4 py-2  !text-lg "
                     >
                       {option.icon && <option.icon />}
                       {option.label}
@@ -54,8 +57,8 @@ export const ButtonNavbar: React.FC<INavbarButton> = (button) => {
         </div>
       ) : (
         <a
-          href="#"
-          className="block py-2 px-3 text-white hover:border-b hover:border-white     md:p-0 "
+          href={button.link}
+          className="flex justify-center py-2 px-3 text-white hover:border-b hover:border-white text-xl md:p-0 "
           aria-current="page"
         >
           {button.label}

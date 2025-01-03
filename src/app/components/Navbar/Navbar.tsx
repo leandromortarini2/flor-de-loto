@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="h-18 border-gray-200 bg-black ">
+      <nav className="h-20 border-gray-200 bg-black ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center  ">
             <Image src={icon} className="h-10 " alt="Flowbite Logo" />
@@ -35,7 +35,7 @@ export const Navbar = () => {
             className="hidden w-full md:block md:w-auto"
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border  rounded-lg  md:space-x-8  md:flex-row md:mt-0 md:border-0">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border justify-center  rounded-lg  md:space-x-8  md:flex-row md:mt-0 md:border-0">
               {navbarButton.map((button, index) => (
                 <ButtonNavbar key={index} {...button} /> //al pasar {...button} estoy desestructurando las propiedades de button y pasandolas directamente como propiedades al componente ButtonNavbar
               ))}
