@@ -16,7 +16,7 @@ export const ButtonNavbar: React.FC<INavbarButton> = (button) => {
   return (
     <li className="list-none">
       {button.options ? (
-        <div className="relative flex justify-center">
+        <div className="hidden relative md:flex justify-center">
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"

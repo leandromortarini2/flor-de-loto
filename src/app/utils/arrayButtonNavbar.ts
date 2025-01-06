@@ -12,6 +12,17 @@ export interface INavbarButton {
     target?: string;
   }[];
 }
+export interface INavbarButtonMovile {
+  label: string;
+  link?: string;
+  options?: {
+    label: string;
+    icon?: IconType; //IconType es el tipo de dato que proporsiona react-icon
+    link: string;
+    rel?: string;
+    target?: string;
+  }[];
+}
 export const navbarButton: INavbarButton[] = [
   {
     label: "Inicio",
@@ -37,6 +48,44 @@ export const navbarButton: INavbarButton[] = [
         link: "#",
       },
     ],
+  },
+  {
+    label: "Contacto",
+    options: [
+      {
+        label: "Facebook",
+        icon: FaFacebookSquare,
+        link: "https://web.facebook.com/profile.php?id=100070364314628",
+        rel: "noreferrer",
+        target: "_blank",
+      },
+      {
+        label: "Instagram",
+        icon: SiInstagram,
+        link: "https://www.instagram.com/flor_de_loto_aromas_y_color?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        rel: "noreferrer",
+        target: "_blank",
+      },
+    ],
+  },
+];
+
+export const navbarButtonMovile = [
+  {
+    label: "Inicio",
+    link: "#",
+  },
+  {
+    label: "Conocenos",
+    link: "#",
+  },
+  {
+    label: "Productos",
+    link: "#",
+  },
+  {
+    label: "Catalogo",
+    link: "#",
   },
   {
     label: "Contacto",
