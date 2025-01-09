@@ -8,7 +8,7 @@ interface Iprop {
 
 export const MenuHamburguer: React.FC<Iprop> = ({ arrayButton }) => {
   return (
-    <div className=" w-2/3 absolute top-20 right-0 z-40  flex flex-col items-end rounded-b-2xl !rounded-r-none bg-violet/90 px-4 py-2  md:hidden">
+    <div className=" w-2/3 md:w-1/2 absolute top-20 right-0 z-40  flex flex-col items-end rounded-b-2xl !rounded-r-none bg-violet/90 px-4 py-2  lg:hidden">
       {arrayButton.map((e, i) => (
         <>
           <ButtonNavbar key={i} {...e} />
