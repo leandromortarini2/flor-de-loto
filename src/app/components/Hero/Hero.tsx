@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "../Button";
 import { IoMdArrowDropright } from "react-icons/io";
@@ -7,12 +8,18 @@ import logo from "../../../../public/assets/logoFlorDeLoto.png";
 
 export const Hero: React.FC = () => {
   return (
-    <div className="w-full min-h-screen bg-portada relative flex justify-center items-center">
-      <div className="w-full h-full bg-black/80 absolute z-0"></div>
-      <div className="w-full z-10 bottom-0 absolute">
-        <Image src={rectangleHero} alt="hero" className="w-full" />
+    <div
+      id="hero"
+      className="w-full min-h-screen bg-transparent relative flex justify-center items-center "
+    >
+      <div className="w-full z-10 bottom-0 absolute ">
+        <Image
+          src={rectangleHero}
+          alt="hero"
+          className="w-full h-screen object-cover"
+        />
       </div>
-      <div className="z-20 relative w-full h-full flex flex-col-reverse  justify-center items-center lg:flex-row">
+      <div className="z-20 relative w-full min-h-full flex flex-col-reverse  justify-center items-center lg:flex-row">
         <div className="w-full lg:w-1/2 flex  gap-4 justify-center lg:justify-end h-full items-center lg:items-end ">
           <div className="w-full lg:w-2/3 flex flex-col  justify-center h-full items-center lg:items-start ">
             <h1 className="text-5xl md:text-7xl lg:text-9xl bg-textGradient bg-clip-text text-transparent text-center lg:text-start pt-4 font-textPrimary">

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import icon from "../../../../public/flordelotoicon.svg";
 import {
@@ -16,14 +16,35 @@ export const Navbar = () => {
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="relative">
-      <nav className="h-20  bg-black ">
+    <div
+      className={`top-0 z-50 sticky transition-all duration-300 w-full ${
+        isScrolled ? "bg-black " : "bg-transparent  "
+      } `}
+    >
+      <nav className="h-20 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" className="flex items-center  ">
+          <a href="#" className="flex items-center gap-1 ">
             <Image src={icon} className="h-10 " alt="Flowbite Logo" />
-            <span className="self-center text-lg md:text-2xl font-textSecondary  whitespace-nowrap text-white">
+            <span className="self-center text-lg md:text-2xl font-textSecondary  whitespace-nowrap text-white mt-1">
               Flor de Loto
             </span>
           </a>

@@ -26,15 +26,15 @@ export interface INavbarButtonMovile {
 export const navbarButton: INavbarButton[] = [
   {
     label: "Inicio",
-    link: "#",
+    link: "#hero",
   },
   {
     label: "Conocenos",
-    link: "#",
+    link: "#about",
   },
   {
     label: "Productos",
-    link: "#",
+    link: "#products",
   },
   {
     label: "Catalogo",
