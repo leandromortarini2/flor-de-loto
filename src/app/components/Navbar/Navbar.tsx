@@ -13,11 +13,12 @@ import { ButtonNavbar } from "./ButtonNavbar";
 export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [openMenuMovile, setOpenMenuMovile] = useState<boolean>(false);
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
+    setOpenMenuMovile(!openMenuMovile);
   };
-  const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -36,9 +37,9 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`top-0 z-50 sticky transition-all duration-300 w-full ${
-        isScrolled ? "bg-black " : "bg-transparent  "
-      } `}
+      className={`top-0 z-50 sticky transition-all duration-300 w-full  ${
+        isScrolled || openMenu ? "bg-black " : "bg-transparent"
+      }  `}
     >
       <nav className="h-20 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
