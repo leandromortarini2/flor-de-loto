@@ -73,15 +73,15 @@ export const navbarButton: INavbarButton[] = [
 export const navbarButtonMovile = [
   {
     label: "Inicio",
-    link: "#",
+    link: "#hero",
   },
   {
     label: "Conocenos",
-    link: "#",
+    link: "#about",
   },
   {
     label: "Productos",
-    link: "#",
+    link: "#products",
   },
   {
     label: "Catalogo",
