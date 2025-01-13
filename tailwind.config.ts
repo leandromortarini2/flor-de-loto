@@ -11,10 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        fucsiaClaro: "#EA69FF",
         fucsia: "#6C0D7B",
         hoverFucsia: "#841795",
         hoverWhite: "#e9e6e6",
         violet: "#4E2E80",
+        violetOscuro: "#2C2343",
         rosa: "#EA69FF",
       },
       fontFamily: {
@@ -26,6 +28,8 @@ export default {
         portadaMovile: "url('/assets/portada.png')",
         textGradient: "linear-gradient(to right, #EDDB1D,#ED1B10, #C119DC)",
         bgAbout: "url('/assets/bg-about.png')",
+        bgFooterMb: "url('/assets/bgFooterMB.png')",
+        bgFooter: "url('/assets/bgFooter.png')",
       },
     },
   },

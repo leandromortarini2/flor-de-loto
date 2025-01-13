@@ -3,13 +3,17 @@ import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
 import Image from "next/image";
 import rectangleHero from "../../public/assets/rectangleHero.png";
+import { Footer } from "./components/Footer/Footer";
 export default function Home() {
   return (
     <>
       <div className="w-full min-h-screen md:h-screen  bg-portada bg-cover">
         <div className="w-full p-0 min-h-[630px] md:min-h-screen bg-black/80 absolute inset-0 z-0"></div>
 
-        <div className="w-full min-h-screen relative z-10 text-center  ">
+        <div
+          id="hero"
+          className="w-full min-h-screen relative z-10 text-center  "
+        >
           <Navbar />
           <div className="w-full  flex justify-center items-start xl:items-center lg:overflow-y-hidden relative  ">
             <Hero />
@@ -22,6 +26,7 @@ export default function Home() {
             </div>
           </div>
           <About />
+          <Footer />
         </div>
       </div>
     </>
