@@ -11,13 +11,13 @@ export const Hero: React.FC = () => {
       <div className="z-20 relative   w-full h-full flex flex-col-reverse justify-end  pb-10 md:justify-center items-center lg:flex-row">
         <div className="w-full lg:w-1/2 flex  gap-4 justify-center md:justify-end lg::h-full items-center md:items-end ">
           <div className="w-full  flex flex-col  justify-center h-full items-center lg:items-start ">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl bg-textGradient bg-clip-text text-transparent text-center md:text-start pt-4 font-textPrimary">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl bg-textGradient bg-clip-text text-transparent text-center md:text-start pt-4 font-textPrimary">
               Flor de Loto
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-5xl text-white font-extralight font-textSecondary text-center lg:text-start mb-3 ">
               Aromas y colores
             </h2>
-            <p className="text-white font-textSecondary font-light text-lg px-4 lg:px-0 md:text-xl xl:text-2xl mb-4 text-center lg:text-start">
+            <p className="text-white font-textSecondary font-light text-lg px-4 lg:px-0 md:text-xl xl:text-2xl mb-4 text-center lg:text-start w-4/5 md:w-1/2 lg:w-auto">
               Descubre la magia del bienestar en cada aroma. Te ofrecemos
               sahumerios, cascadas de humo y productos únicos que transforman
               tus espacios en refugios de calma y energía positiva.
