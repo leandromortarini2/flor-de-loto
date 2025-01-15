@@ -4,6 +4,8 @@ import { Navbar } from "./components/Navbar/Navbar";
 import Image from "next/image";
 import rectangleHero from "../../public/assets/rectangleHero.png";
 import { Footer } from "./components/Footer/Footer";
+import { Products } from "./components/Products/Products";
+import { WhatsappButton } from "./components/WhatsappButton/WhatsappButton";
 export default function Home() {
   return (
     <>
@@ -26,6 +28,8 @@ export default function Home() {
             </div>
           </div>
           <About />
+          <Products />
+          <WhatsappButton />
           <Footer />
         </div>
       </div>

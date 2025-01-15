@@ -6,7 +6,7 @@ export const About: React.FC = () => {
   return (
     <div
       id="about"
-      className="w-full lg:min-h-screen bg-white lg:bg-bgAbout pt-20 flex flex-col lg:flex-row justify-center items-center bg-cover"
+      className="w-full lg:min-h-screen bg-white lg:bg-bgAbout pt-20 lg:pb-28 flex flex-col lg:flex-row justify-center items-center bg-cover"
     >
       <div className="w-full lg:w-1/2 lg:h-full flex justify-center lg:justify-end items-center px-4">
         <Image
