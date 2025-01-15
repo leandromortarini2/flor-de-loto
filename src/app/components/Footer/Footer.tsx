@@ -23,14 +23,14 @@ export const Footer: React.FC = () => {
           </h2>
           <button
             onClick={() => handleCopy("flordeloto@gmail.com")}
-            className="text-white  font-textSecondary flex items-center gap-1 text-sm md:text-base "
+            className="text-white  font-textSecondary flex items-center gap-1 text-sm md:text-base  hover:text-rosa "
           >
             <MdAlternateEmail />
             flordeloto@gmail.com
           </button>
           <button
             onClick={() => handleCopy("11 2288- 3245")}
-            className="text-white  font-textSecondary flex items-center gap-1  text-sm md:text-base "
+            className="text-white  font-textSecondary flex items-center gap-1  text-sm md:text-base  hover:text-rosa "
           >
             <FaPhoneAlt /> 11 2288- 3245
           </button>
@@ -42,15 +42,21 @@ export const Footer: React.FC = () => {
             </h2>
             <Link
               href="#hero"
-              className="text-white font-textSecondary text-sm md:text-base "
+              className="text-white font-textSecondary text-sm md:text-base  hover:text-rosa "
             >
               Inicio
             </Link>
             <Link
               href="#about"
-              className="text-white font-textSecondary text-sm md:text-base "
+              className="text-white font-textSecondary text-sm md:text-base  hover:text-rosa "
             >
               Conocenos
+            </Link>
+            <Link
+              href="#products"
+              className="text-white font-textSecondary text-sm md:text-base  hover:text-rosa "
+            >
+              Productos
             </Link>
           </div>
           <div className="flex flex-col  items-start lg:items-center w-1/2 lg:w-1/3  gap-2">
@@ -62,7 +68,7 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/flor_de_loto_aromas_y_color/"
-                className="text-white font-textSecondary text-base md:text-lg "
+                className="text-white font-textSecondary text-base md:text-lg hover:text-rosa "
               >
                 <FaInstagram />
               </a>
@@ -70,7 +76,7 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 target="_blank"
                 href="https://web.facebook.com/profile.php?id=100070364314628"
-                className="text-white font-textSecondary text-base md:text-lg"
+                className="text-white font-textSecondary text-base md:text-lg hover:text-rosa "
               >
                 <FaFacebookF />
               </a>

@@ -62,7 +62,12 @@ export const Navbar = () => {
           >
             <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border justify-center  rounded-lg  lg:space-x-8  lg:flex-row lg:mt-0 lg:border-0">
               {navbarButton.map((button, index) => (
-                <ButtonNavbar key={index} {...button} /> //al pasar {...button} estoy desestructurando las propiedades de button y pasandolas directamente como propiedades al componente ButtonNavbar
+                <ButtonNavbar
+                  key={index}
+                  {...button}
+                  state={openMenu}
+                  setState={setOpenMenu}
+                /> //al pasar {...button} estoy desestructurando las propiedades de button y pasandolas directamente como propiedades al componente ButtonNavbar
               ))}
             </ul>
           </div>

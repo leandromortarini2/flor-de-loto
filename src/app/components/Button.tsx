@@ -3,7 +3,7 @@ import React from "react";
 interface IProp {
   text: string;
   color: "primary" | "secondary";
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   classButton?: string;
   link: string;
 }
@@ -18,7 +18,7 @@ export const Button: React.FC<IProp> = ({
   return (
     <Link href={link}>
       <button
-        className={`rounded-xl flex justify-center items-center  px-4 py-2 text-base xl:text-lg uppercase font-textSecondary ${
+        className={`rounded-xl flex justify-center items-center  px-4 py-2 text-base xl:text-lg  font-textSecondary ${
           color === "primary"
             ? "bg-fucsia text-white hover:bg-hoverFucsia duration-100"
             : "bg-white text-fucsia hover:bg-hoverWhite duration-150 "

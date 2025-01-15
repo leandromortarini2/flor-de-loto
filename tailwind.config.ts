@@ -30,6 +30,7 @@ export default {
         bgAbout: "url('/assets/bg-about.png')",
         bgFooterMb: "url('/assets/bgFooterMB.png')",
         bgFooter: "url('/assets/bgFooter.png')",
+        bgProducts: "url('/assets/bgProducts.png')",
       },
     },
   },

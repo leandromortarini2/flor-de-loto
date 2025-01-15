@@ -27,13 +27,14 @@ export const Hero: React.FC = () => {
                 text="productos"
                 color="primary"
                 icon={<IoMdArrowDropright />}
+                classButton="uppercase"
                 link="#products"
               />
               <Button
                 text="conocenos"
                 color="secondary"
                 icon={<IoMdArrowDropright />}
-                classButton="hidden lg:flex"
+                classButton="hidden lg:flex uppercase"
                 link="#about"
               />
             </div>
