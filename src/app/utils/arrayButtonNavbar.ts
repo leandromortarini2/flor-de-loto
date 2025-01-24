@@ -87,7 +87,7 @@ export const navbarButtonMovile = [
   },
   {
     label: "Catalogo",
-    link: "#",
+    link: "/catalogo",
   },
   {
     label: "Contacto",

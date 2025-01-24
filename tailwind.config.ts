@@ -32,6 +32,9 @@ export default {
         bgFooter: "url('/assets/bgFooter.png')",
         bgProducts: "url('/assets/bgProducts.png')",
       },
+      screens: {
+        xs: "320px",
+      },
     },
   },
   plugins: [],

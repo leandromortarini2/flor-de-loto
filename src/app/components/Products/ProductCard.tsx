@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Button } from "../Button";
+import { useRotate } from "@/app/hooks/useRotate";
 interface IProductCard {
   img: string;
   title: string;
@@ -18,6 +20,7 @@ export const ProductCard: React.FC<IProductCard> = ({
   label,
   direction,
 }) => {
+  const rotateScreen = useRotate();
   return (
     <div
       className={`w-full flex  justify-center my-8 gap-4 ${
@@ -63,26 +66,36 @@ export const ProductCard: React.FC<IProductCard> = ({
             alt={title}
             width={300}
             height={300}
-            className="w-3/4  md:w-1/2"
+            className={`${
+              rotateScreen ? "w-1/3 md:w-3/6" : "w-3/4  md:w-3/5"
+            } `}
           />
         </div>
-        <p
-          className={` w-3/4 md:w-3/5 lg:w-2/3 text-base  md:text-lg ${
-            direction == "right"
-              ? "text-start lg:text-start"
-              : "text-start lg:text-end"
-          }`}
-        >
-          {description}
-        </p>
-        <div
-          className={`w-full flex px-10 md:px-36 lg:px-0 ${
-            direction == "right"
-              ? "justify-end lg:justify-start"
-              : "justify-end lg:justify-end"
-          }`}
-        >
-          <Button text={label} color="primary" link={link} classButton="" />
+        <div className="w-3/4 md:w-3/5 lg:w-2/3">
+          <p
+            className={`w-full  text-base  md:text-lg ${
+              direction == "right"
+                ? "text-start lg:text-start"
+                : "text-start lg:text-end"
+            }`}
+          >
+            {description}
+          </p>
+          <div
+            className={`w-full flex  ${
+              direction == "right"
+                ? "justify-end lg:justify-start"
+                : "justify-end lg:justify-end"
+            }`}
+          >
+            <Button
+              text={label}
+              color="primary"
+              link={link}
+              title={title}
+              classButton=""
+            />
+          </div>
         </div>
       </div>
     </div>

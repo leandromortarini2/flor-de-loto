@@ -14,6 +14,21 @@ export const Footer: React.FC = () => {
       .then(() => toast.success("Copiado al portapapeles"))
       .catch((error) => toast.error("Error al copiar al portapapeles"));
   };
+
+  const handleClick = ({ link, label }: { link: string; label: string }) => {
+    toast(`Serás redirigido a ${label}`, {
+      cancel: {
+        label: "Cancelar",
+        onClick: () => console.log("Cancel!"),
+      },
+      action: {
+        label: "Aceptar",
+        onClick: () => {
+          window.open(link, "_blank");
+        },
+      },
+    });
+  };
   return (
     <div className="w-full min-h-[30rem] lg:min-h-48 bg-bgFooterMb lg:bg-bgFooter bg-cover p-4 flex  justify-center">
       <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-center lg:justify-evenly gap-20 px-5 ">
@@ -64,22 +79,28 @@ export const Footer: React.FC = () => {
               ¡Siguenos!
             </h2>
             <div className="flex gap-2 justify-center">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.instagram.com/flor_de_loto_aromas_y_color/"
+              <button
+                onClick={() =>
+                  handleClick({
+                    link: "https://www.instagram.com/flor_de_loto_aromas_y_color/",
+                    label: "Instagram",
+                  })
+                }
                 className="text-white font-textSecondary text-base md:text-lg hover:text-rosa "
               >
                 <FaInstagram />
-              </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://web.facebook.com/profile.php?id=100070364314628"
+              </button>
+              <button
+                onClick={() =>
+                  handleClick({
+                    link: "https://web.facebook.com/profile.php?id=100070364314628",
+                    label: "Facebook",
+                  })
+                }
                 className="text-white font-textSecondary text-base md:text-lg hover:text-rosa "
               >
                 <FaFacebookF />
-              </a>
+              </button>
             </div>
           </div>
         </div>
