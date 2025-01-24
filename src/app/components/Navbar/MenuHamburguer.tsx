@@ -10,8 +10,8 @@ export const MenuHamburguer: React.FC<Iprop> = ({ arrayButton }) => {
   return (
     <div className=" w-2/3 md:w-1/2 absolute top-20 right-0 z-40  flex flex-col items-end rounded-b-2xl !rounded-r-none bg-violet/90 px-4 py-2  lg:hidden">
       {arrayButton.map((e, i) => (
-        <>
-          <ButtonNavbar key={i} {...e} />
+        <div key={i}>
+          <ButtonNavbar {...e} />
           {e?.label === "Contacto" && e.options && (
             <div className="w-full flex gap-4 justify-end py-2 px-3">
               {e &&
@@ -25,7 +25,7 @@ export const MenuHamburguer: React.FC<Iprop> = ({ arrayButton }) => {
                 ))}
             </div>
           )}
-        </>
+        </div>
       ))}
     </div>
   );

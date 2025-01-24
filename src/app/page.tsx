@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full min-h-screen md:h-screen  bg-portada bg-cover">
-        <div className="w-full p-0 min-h-[630px] md:min-h-screen bg-black/80 absolute inset-0 z-0"></div>
+        <div className="w-full p-0 xs:min-h-[700px] sm:min-h-[630px] md:min-h-screen bg-black/80 absolute inset-0 z-0"></div>
 
         <div
           id="hero"
