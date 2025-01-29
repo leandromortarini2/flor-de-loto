@@ -37,7 +37,7 @@ export const cascadasArray = [
   },
   {
     id: 1,
-    name: "Cascada 4",
+    name: "Cascada 5",
     description: "Cascadas pintadas a mano con materiales de alta calidad",
     image: "/assets/cascada.jpg",
     labelButton: "Pedir",
@@ -46,7 +46,7 @@ export const cascadasArray = [
   },
   {
     id: 1,
-    name: "Cascada 4",
+    name: "Cascada 6",
     description: "Cascadas pintadas a mano con materiales de alta calidad",
     image: "/assets/cascada.jpg",
     labelButton: "Pedir",
@@ -55,7 +55,7 @@ export const cascadasArray = [
   },
   {
     id: 1,
-    name: "Cascada 4",
+    name: "Cascada 7",
     description: "Cascadas pintadas a mano con materiales de alta calidad",
     image: "/assets/cascada.jpg",
     labelButton: "Pedir",
