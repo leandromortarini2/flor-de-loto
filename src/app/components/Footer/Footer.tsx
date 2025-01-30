@@ -5,29 +5,19 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import { toast } from "sonner";
+import { alertNavbar } from "@/app/hooks/useAlertNavbar";
+import Swal from "sweetalert2";
 
 export const Footer: React.FC = () => {
   const handleCopy = (text: string) => {
     navigator.clipboard
       .writeText(text)
-      .then(() => toast.success("Copiado al portapapeles"))
-      .catch((error) => toast.error("Error al copiar al portapapeles"));
+      .then(() => Swal.fire("Copiado al portapapeles"))
+      .catch((error) => Swal.fire(`Error al copiar al portapapeles: ${error}`));
   };
 
   const handleClick = ({ link, label }: { link: string; label: string }) => {
-    toast(`Serás redirigido a ${label}`, {
-      cancel: {
-        label: "Cancelar",
-        onClick: () => console.log("Cancel!"),
-      },
-      action: {
-        label: "Aceptar",
-        onClick: () => {
-          window.open(link, "_blank");
-        },
-      },
-    });
+    alertNavbar({ label, finalLink: link, labelDad: "" });
   };
   return (
     <div className="w-full min-h-[30rem] lg:min-h-48 bg-bgFooterMb lg:bg-bgFooter bg-cover p-4 flex  justify-center">

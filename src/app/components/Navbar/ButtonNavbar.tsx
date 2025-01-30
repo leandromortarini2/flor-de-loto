@@ -1,8 +1,8 @@
 "use client";
+import { alertNavbar } from "@/app/hooks/useAlertNavbar";
 import { INavbarButton } from "@/app/utils/arrayButtonNavbar";
 import React from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { toast } from "sonner";
 
 export const ButtonNavbar: React.FC<INavbarButton> = ({
   label,
@@ -28,23 +28,7 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
         ? `${link}?product=${encodeURIComponent(label)}`
         : link || "/";
 
-    toast(`Serás redirigido a ${label}`, {
-      cancel: {
-        label: "Cancelar",
-        onClick: () => console.log("Cancel!"),
-      },
-
-      action: {
-        label: "Aceptar",
-        onClick: () => {
-          if (labelDad !== "Catalogo") {
-            window.open(finalLink, "_blank");
-          } else {
-            window.location.href = finalLink;
-          }
-        },
-      },
-    });
+    alertNavbar({ label, finalLink, labelDad });
   };
 
   return (
