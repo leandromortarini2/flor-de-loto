@@ -12,6 +12,7 @@ import { ButtonNavbar } from "./ButtonNavbar";
 
 export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [openDropdown, setOpenDropdown] = useState<string>("");
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [openMenuMovile, setOpenMenuMovile] = useState<boolean>(false);
@@ -34,6 +35,18 @@ export const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleOpen = (label: string) => {
+    console.log(label);
+    if (openDropdown === label) {
+      setOpenDropdown("");
+    } else {
+      setOpenDropdown(label);
+      setIsScrolled(true);
+    }
+
+    // recibe el estado y su funcion para setear, con el fin de que cuando se abra el dropdown, el navbar cambie el bg a negro, solo cuando el bg del navbar es transparente
+  };
 
   return (
     <div
@@ -63,10 +76,11 @@ export const Navbar = () => {
             <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border justify-center  rounded-lg  lg:space-x-8  lg:flex-row lg:mt-0 lg:border-0">
               {navbarButton.map((button, index) => (
                 <ButtonNavbar
+                  handle={handleOpen}
                   key={index}
                   {...button}
-                  state={openMenu}
-                  setState={setOpenMenu}
+                  title={button.label}
+                  isOpen={openDropdown}
                 /> //al pasar {...button} estoy desestructurando las propiedades de button y pasandolas directamente como propiedades al componente ButtonNavbar
               ))}
             </ul>

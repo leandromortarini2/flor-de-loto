@@ -21,7 +21,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "Porta sahumerio",
+    name: "Porta Sahumerio",
     description:
       "que transforman tus espacios en refugios de calma y energía positiva. Encuentra el equilibrio que buscas, con el toque perfecto de armonía y estilo.",
     image: "/assets/image5.png",

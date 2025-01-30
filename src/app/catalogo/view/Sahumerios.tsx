@@ -6,7 +6,7 @@ export const Sahumerios = () => {
   return (
     <div
       id="sahumerios"
-      className="w-full min-h-screen flex flex-col justify-center items-center bg-fucsiaClaro lg:flex-wrap lg:justify-start gap-4"
+      className="w-full min-h-screen flex  justify-center items-center  flex-wrap lg:justify-start  gap-4"
     >
       {sahumeriosArray.map((e, i) => (
         <CardProductCat

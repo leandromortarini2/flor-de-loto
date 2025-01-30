@@ -1,6 +1,6 @@
 "use client";
 import { INavbarButton } from "@/app/utils/arrayButtonNavbar";
-import React, { useState } from "react";
+import React from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { toast } from "sonner";
 
@@ -8,41 +8,9 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
   label,
   link,
   options,
-  state,
-  setState,
+  handle,
+  isOpen,
 }) => {
-  const [openDropdown, setOpenDropdown] = useState<boolean>(false);
-
-  const [labelDropdown, setLabelDropdown] = useState<string>("");
-  const handleOpen = (label: string) => {
-    if (label) {
-      setLabelDropdown(label);
-    }
-    setOpenDropdown(!openDropdown);
-    // recibe el estado y su funcion para setear, con el fin de que cuando se abra el dropdown, el navbar cambie el bg a negro, solo cuando el bg del navbar es transparente
-    if (setState) {
-      setState(!state);
-    }
-  };
-  const handleOpenDropdown = ({
-    link,
-    label,
-    labelDad,
-  }: {
-    link: string | undefined;
-    label: string;
-    labelDad: string;
-  }) => {
-    if (label) {
-      setLabelDropdown(label);
-    }
-    setOpenDropdown(!openDropdown);
-    // recibe el estado y su funcion para setear, con el fin de que cuando se abra el dropdown, el navbar cambie el bg a negro, solo cuando el bg del navbar es transparente
-    if (setState) {
-      setState(!state);
-    }
-    handleClick({ link, labelDad, label });
-  };
   const handleClick = ({
     link,
     label,
@@ -52,9 +20,14 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
     label: string;
     labelDad: string;
   }) => {
-    console.log(labelDad);
-    console.log(link);
-    setOpenDropdown(false);
+    if (handle) handle("");
+
+    // Si es del dropdown "Categorías", se concatena el título a la URL
+    const finalLink =
+      labelDad === "Catalogo" && link
+        ? `${link}?product=${encodeURIComponent(label)}`
+        : link || "/";
+
     toast(`Serás redirigido a ${label}`, {
       cancel: {
         label: "Cancelar",
@@ -65,49 +38,51 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
         label: "Aceptar",
         onClick: () => {
           if (labelDad !== "Catalogo") {
-            window.open(link, "_blank");
+            window.open(finalLink, "_blank");
           } else {
-            window.open(link);
+            window.location.href = finalLink;
           }
         },
       },
     });
   };
+
   return (
     <li className="list-none">
       {options ? (
-        <div className="hidden relative lg:flex justify-center">
+        <div className="hidden relative lg:flex justify-center  ">
           <button
-            id="dropdownNavbarLink"
-            data-dropdown-toggle="dropdownNavbar"
-            className="flex !text-xl font-textSecondary  justify-between w-full py-2 px-3 text-white  md:p-0 md:w-auto hover:border-b hover:border-white"
-            onClick={() => handleOpen(label)}
+            className={`flex !text-lg font-textSecondary justify-between items-center lg:mt-1 w-full py-2 px-3 md:p-0 md:w-auto hover:text-rosa ${
+              isOpen && isOpen === label ? "text-rosa" : "text-white"
+            }`}
+            onClick={() => handle && handle(label)}
           >
             {label}
             <IoMdArrowDropdown
-              className={`text-white text-2xl ${openDropdown && "rotate-180"}`}
+              className={`text-2xl transition-transform  ${
+                isOpen && isOpen === label
+                  ? "rotate-180 text-rosa"
+                  : "text-inherit" // `text-inherit` hereda el color del padre en vez de poner un color fijo como text-white
+              } group-hover:text-rosa`} // `group` permite a los elementos hijos heredar eventos del contenedor padre, como el `hover`
             />
           </button>
-          {openDropdown && labelDropdown == label && (
-            <div
-              id="dropdownNavbar"
-              className="z-10 absolute top-10  md:top-14  font-normal bg-black divide-y divide-gray-100 flex justify-center  shadow shadow-violetOscuro "
-            >
+          {isOpen && isOpen === label && (
+            <div className="z-10 absolute top-10 md:top-14 min-w-48 font-normal bg-black divide-y divide-gray-100 flex justify-center shadow shadow-violetOscuro">
               <ul
-                className="py-2  text-white "
+                className="py-2 text-white"
                 aria-labelledby="dropdownLargeButton"
               >
                 {options.map((option, index) => (
-                  <li key={index} className="">
+                  <li key={index}>
                     <button
                       onClick={() =>
-                        handleOpenDropdown({
+                        handleClick({
                           label: option.label,
                           link: option.link,
                           labelDad: label,
                         })
                       }
-                      className="flex  justify-center font-textSecondary items-center gap-2  px-4 py-2  !text-lg hover:border-b hover:border-white mx-1"
+                      className="w-full flex whitespace-nowrap justify-start font-textSecondary items-center gap-2 px-4 py-2 !text-lg hover:text-rosa mx-1"
                     >
                       {option.icon && <option.icon />}
                       {option.label}
@@ -121,8 +96,7 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
       ) : (
         <a
           href={link}
-          className="flex justify-center py-2 px-3 text-white hover:border-b hover:border-white text-xl md:p-0 "
-          aria-current="page"
+          className="flex justify-center  py-2 px-3 text-white hover:text-rosa text-xl md:p-0"
         >
           {label}
         </a>

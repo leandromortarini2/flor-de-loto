@@ -11,8 +11,9 @@ export interface INavbarButton {
     rel?: string;
     target?: string;
   }[];
-  state?: boolean;
-  setState?: React.Dispatch<React.SetStateAction<boolean>>;
+  handle?: (label: string) => void;
+  title?: string;
+  isOpen?: string;
 }
 export interface INavbarButtonMovile {
   label: string;
@@ -42,11 +43,19 @@ export const navbarButton: INavbarButton[] = [
     label: "Catalogo",
     options: [
       {
-        label: "Sahumerios",
+        label: "Palo Santo",
         link: "/catalogo",
       },
       {
-        label: "Porta Sahumerios",
+        label: "Lampara de sal",
+        link: "/catalogo",
+      },
+      {
+        label: "Porta Sahumerio",
+        link: "/catalogo",
+      },
+      {
+        label: "Cascada de humo",
         link: "/catalogo",
       },
     ],

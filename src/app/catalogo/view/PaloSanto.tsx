@@ -1,14 +1,11 @@
-import { cascadasArray } from "@/app/utils/ArrayProducts/cascadas";
+import { paloSantoArray } from "@/app/utils/ArrayProducts/paloSanto";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
 
-const Cascadas = () => {
+const PaloSanto = () => {
   return (
-    <div
-      id="cascadas"
-      className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 "
-    >
-      {cascadasArray.map((e, i) => (
+    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+      {paloSantoArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -22,4 +19,4 @@ const Cascadas = () => {
     </div>
   );
 };
-export default Cascadas;
+export default PaloSanto;
