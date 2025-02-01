@@ -72,17 +72,24 @@ export const ProductCard: React.FC<IProductCard> = ({
           />
         </div>
         <div className="w-3/4 md:w-3/5 lg:w-2/3">
-          <p
-            className={`w-full  text-base  md:text-lg ${
-              direction == "right"
-                ? "text-start lg:text-start"
-                : "text-start lg:text-end"
+          <div
+            className={`w-full flex ${
+              direction == "right" ? "justify-start" : "justify-end"
             }`}
           >
-            {description}
-          </p>
+            <p
+              className={`w-full lg:w-3/4  text-base  md:text-lg ${
+                direction == "right"
+                  ? "text-start lg:text-start"
+                  : "text-start lg:text-end"
+              }`}
+            >
+              {description}
+            </p>
+          </div>
+
           <div
-            className={`w-full flex  ${
+            className={`w-full flex my-4  ${
               direction == "right"
                 ? "justify-end lg:justify-start"
                 : "justify-end lg:justify-end"

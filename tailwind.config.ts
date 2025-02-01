@@ -31,6 +31,7 @@ export default {
         bgFooterMb: "url('/assets/bgFooterMB.png')",
         bgFooter: "url('/assets/bgFooter.png')",
         bgProducts: "url('/assets/bgProducts.png')",
+        bgHeroMovile: "url('/assets/bgheromovile2.jpeg')",
       },
       screens: {
         xs: "320px",

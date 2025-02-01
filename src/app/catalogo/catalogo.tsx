@@ -16,8 +16,7 @@ const viewComponents: { [key: string]: React.ReactNode } = {
 
 const Catalogo = () => {
   const searchParams = useSearchParams();
-  const productName = searchParams.get("product"); // Capturar el nombre del producto
-  const [openView, setOpenView] = useState<string | null>(productName);
+  const [openView, setOpenView] = useState<string | null>(null);
   console.log(openView);
   const [focusButton, setFocusButton] = useState<boolean>(false);
   const handleOpenView = (cat: string) => {
@@ -26,10 +25,12 @@ const Catalogo = () => {
     }
   };
   useEffect(() => {
-    if (openView) {
+    const productName = searchParams.get("product"); // Capturar el nombre del producto
+    if (productName) {
+      setOpenView(productName);
       setFocusButton(true);
     }
-  }, [openView]);
+  }, [searchParams]);
 
   return (
     <div className="w-full min-h-screen relative">
@@ -39,8 +40,7 @@ const Catalogo = () => {
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-violetOscuro ">
           <ul className=" font-medium">
-            <div className="w-full h-8"></div>
-            {/* <li className="py-2">
+            <li className="">
               <p className="flex items-center p-2 text-white rounded-lg  gap-1 ">
                 <Image
                   src={"/flordelotoicon.svg"}
@@ -50,13 +50,13 @@ const Catalogo = () => {
                 />
                 Flor de Loto
               </p>
-            </li> */}
-            {/* <div className="w-full border-b border-white"></div> */}
+            </li>
+            <div className="w-full border-b border-white"></div>
             <li className="gap-4 pt-2">
               {categoriesArray.map((cat) => (
                 <button
                   key={cat.id}
-                  className={`w-full flex justify-start p-2  rounded-lg   capitalize focus:bg-gray-100 focus:text-violetOscuro ${
+                  className={`w-full flex justify-start p-2 mb-2  rounded-lg   capitalize focus:bg-gray-100 focus:text-violetOscuro ${
                     focusButton && cat.name === openView
                       ? "bg-gray-100 text-violetOscuro"
                       : "text-white"
@@ -83,7 +83,7 @@ const Catalogo = () => {
           </ul>
         </div>
       </aside>
-      <div className="w-full bg-violetOscuro text-white h-12 flex justify-center items-center">
+      <div className="w-full bg-violetOscuro text-white h-12 flex justify-center items-center lg:hidden">
         <Image src={"/flordelotoicon.svg"} alt="logo" width={30} height={30} />
         Flor de loto
       </div>
