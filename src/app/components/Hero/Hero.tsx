@@ -9,7 +9,7 @@ import { useRotate } from "@/app/hooks/useRotate";
 export const Hero: React.FC = () => {
   const rotateScreen = useRotate();
   return (
-    <div className="w-full  md:h-auto lg:h-screen  bg-transparent relative bottom-0 flex justify-center items-center   overflow-hidden   ">
+    <div className="w-full  md:h-auto lg:h-screen bg-transparent relative bottom-0 flex justify-center items-center   overflow-hidden">
       <div className="z-20 relative   w-full h-full flex flex-col-reverse justify-end  pb-10 md:justify-center items-center lg:flex-row">
         <div className="w-full lg:w-1/2 2xl:w-1/3 flex   justify-center md:justify-end  items-center md:items-end ">
           <div className=" w-5/6 md:w-full 2xl:w-5/6 flex flex-col  justify-center h-full items-center lg:items-start ">
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         <div
-          className={`w-full md:w-2/3 lg:w-2/6  flex justify-center xl:justify-start  items-center `}
+          className={` w-full md:w-2/3 lg:w-2/6  flex justify-center xl:justify-start  items-center `}
         >
           <Image
             src={logo}
