@@ -96,7 +96,7 @@ export const navbarButtonMovile = [
   },
   {
     label: "Catalogo",
-    link: "/catalogo",
+    link: "/catalogo/Palo%20Santo",
   },
   {
     label: "Contacto",

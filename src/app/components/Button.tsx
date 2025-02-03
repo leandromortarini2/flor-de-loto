@@ -34,9 +34,7 @@ export const Button: React.FC<IProp> = ({
   return (
     <>
       {title ? (
-        <Link
-          href={`${link}?product=${encodeURIComponent(title ? title : "")}`}
-        >
+        <Link href={`${link}/${title}`}>
           <button
             className={`rounded-xl flex justify-center items-center  px-3 py-1 text-base   font-textSecondary ${
               color === "primary"
