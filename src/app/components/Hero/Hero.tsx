@@ -9,9 +9,11 @@ import { useRotate } from "@/app/hooks/useRotate";
 export const Hero: React.FC = () => {
   const rotateScreen = useRotate();
   return (
-    <div className="w-full  md:h-auto lg:h-screen bg-transparent relative bottom-0 flex justify-center items-center   overflow-hidden">
-      <div className="z-20 relative   w-full h-full flex flex-col-reverse justify-end  pb-10 md:justify-center items-center lg:flex-row">
-        <div className="w-full lg:w-1/2 2xl:w-1/3 flex   justify-center md:justify-end  items-center md:items-end ">
+    <div
+      className={`w-full h-full md:h-auto lg:h-screen bg-transparent relative bottom-0 flex justify-center items-center   overflow-hidden`}
+    >
+      <div className="z-20 relative   w-full h-full flex flex-col-reverse justify-center mb-10 md:justify-center items-center lg:flex-row">
+        <div className="w-full lg:w-1/2 2xl:w-1/3 flex   justify-center md:justify-end  items-center md:items-end mb-5 md:mb-0 ">
           <div className=" w-5/6 md:w-full 2xl:w-5/6 flex flex-col  justify-center h-full items-center lg:items-start ">
             <h1 className="text-5xl md:text-7xl lg:text-8xl bg-textGradient bg-clip-text text-transparent text-center md:text-start pt-4 font-textPrimary">
               Flor de Loto
@@ -49,7 +51,7 @@ export const Hero: React.FC = () => {
             src={logo}
             alt="logo"
             className={` ${
-              rotateScreen ? "w-1/3 lg:w-full" : "w-2/3 lg:w-full"
+              rotateScreen ? "w-1/3 lg:w-full" : "w-[55%] lg:w-full"
             } `}
           />
         </div>

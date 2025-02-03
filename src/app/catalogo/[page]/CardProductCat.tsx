@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "../components/Button";
+import { Button } from "../../components/Button";
 
 interface CardProductCatProps {
   image: string;

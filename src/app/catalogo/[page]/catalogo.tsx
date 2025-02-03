@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { categoriesArray } from "../utils/arrayCategories";
+import React, { use, useEffect, useState } from "react";
+import { categoriesArray } from "../../utils/arrayCategories";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { BiArrowBack } from "react-icons/bi";
 import { Cascadas, LamparaSal, PaloSanto, PortaSahumerio } from "./view"; //aca se estan importando las vistas desde la carpeta view ya que todas estan exportadas por default desde index.ts
+import LotoLoader from "@/app/components/Loader";
 
 const viewComponents: { [key: string]: React.ReactNode } = {
   "Palo Santo": <PaloSanto />,
@@ -14,23 +14,32 @@ const viewComponents: { [key: string]: React.ReactNode } = {
   "Porta Sahumerio": <PortaSahumerio />,
 };
 
-const Catalogo = () => {
-  const searchParams = useSearchParams();
-  const [openView, setOpenView] = useState<string | null>(null);
-  console.log(openView);
+const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
+  const { page } = use(params);
+  const [openView, setOpenView] = useState<string>("");
+  console.log(page);
   const [focusButton, setFocusButton] = useState<boolean>(false);
+  const [loader, setLoader] = useState<boolean>(false);
   const handleOpenView = (cat: string) => {
     if (cat) {
       setOpenView(cat);
     }
   };
   useEffect(() => {
-    const productName = searchParams.get("product"); // Capturar el nombre del producto
+    setLoader(true);
+
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
+  }, [openView]);
+
+  useEffect(() => {
+    const productName = decodeURIComponent(page); // Capturar el nombre del producto
     if (productName) {
       setOpenView(productName);
       setFocusButton(true);
     }
-  }, [searchParams]);
+  }, [params]);
 
   return (
     <div className="w-full min-h-screen relative">
@@ -88,9 +97,10 @@ const Catalogo = () => {
         Flor de loto
       </div>
       <div className="p-4 sm:ml-64">
-        <div className="p-4 ">
-          {/* Render dinámico basado en el estado openView */}
-          {openView && viewComponents[openView] ? (
+        <div className="p-4">
+          {loader ? (
+            <LotoLoader />
+          ) : openView && viewComponents[openView] ? (
             viewComponents[openView]
           ) : (
             <h1>Selecciona una categoría del catálogo</h1>
