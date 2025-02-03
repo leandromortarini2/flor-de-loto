@@ -53,7 +53,7 @@ export const Button: React.FC<IProp> = ({
             className={`rounded-xl flex justify-center items-center  px-3 py-1 text-base   font-textSecondary ${
               color === "primary"
                 ? "bg-fucsia text-white hover:bg-hoverFucsia duration-100"
-                : "bg-white text-fucsia hover:bg-hoverWhite duration-150 "
+                : "bg-transparent text-white hover:bg-hoverWhite hover:text-fucsia duration-150 "
             } ${classButton && classButton}`}
             onClick={() => handleOnCkick({ label: text, message })}
           >

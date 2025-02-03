@@ -5,6 +5,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import Image from "next/image";
 import logo from "../../../../public/assets/logoFlorDeLoto.png";
 import { useRotate } from "@/app/hooks/useRotate";
+import { ButtonLanding } from "../ButtonLanding";
 
 export const Hero: React.FC = () => {
   const rotateScreen = useRotate();
@@ -26,14 +27,17 @@ export const Hero: React.FC = () => {
               sahumerios, cascadas de humo y productos únicos que transforman
               tus espacios en refugios de calma y energía positiva.
             </p>
-            <div className="flex gap-4 w-2/3 lg:w-full justify-center lg:justify-start">
-              <Button
+            <div className="flex gap-4 w-2/3 lg:w-full justify-center items-center lg:justify-start">
+              {/* <Button
                 text="productos"
                 color="primary"
                 icon={<IoMdArrowDropright />}
                 classButton="uppercase"
                 link="#products"
-              />
+              /> */}
+
+              <ButtonLanding text="productos" link="#products" />
+
               <Button
                 text="conocenos"
                 color="secondary"
@@ -41,6 +45,7 @@ export const Hero: React.FC = () => {
                 classButton="hidden lg:flex uppercase"
                 link="#about"
               />
+              {/* <ButtonLanding text="conocenos" link="#about" /> */}
             </div>
           </div>
         </div>
