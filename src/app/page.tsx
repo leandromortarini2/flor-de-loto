@@ -25,7 +25,7 @@ export default function Home() {
         <LotoLoader />
       ) : (
         <>
-          <div className="absolute inset-0 bg-black/50 lg:hidden"></div>
+          <div className="h-screen absolute inset-0 bg-black/50 lg:hidden"></div>
 
           <div
             className={`w-full bg-bgHeroMovile lg:bg-portada bg-opacity-100 bg-cover ${
