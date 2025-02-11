@@ -18,7 +18,7 @@ export const CardProductCat: React.FC<CardProductCatProps> = ({
   textButton,
 }) => {
   return (
-    <div className="w-44 h-80 bg-gray-100 flex flex-col justify-evenly items-center py-1 px-2 rounded-xl shadow-md shadow-gray-300 hover:scale-105 duration-300 hover:cursor-default">
+    <div className="w-40 h-80 bg-gray-100 flex flex-col justify-evenly items-center py-1 px-2 rounded-xl shadow-md shadow-gray-300 hover:scale-105 duration-300 hover:cursor-default">
       <Image
         src={image}
         alt={title}

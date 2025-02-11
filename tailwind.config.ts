@@ -24,7 +24,7 @@ export default {
         textSecondary: " Poppins, serif",
       },
       backgroundImage: {
-        portada: "url('/assets/portada.png')",
+        bgHero: "url('/assets/bghero.jpeg')",
         portadaMovile: "url('/assets/portada.png')",
         textGradient: "linear-gradient(to right, #EDDB1D,#ED1B10, #C119DC)",
         bgAbout: "url('/assets/bg-about.png')",
