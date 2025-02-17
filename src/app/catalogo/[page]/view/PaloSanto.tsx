@@ -4,7 +4,7 @@ import { CardProductCat } from "../CardProductCat";
 
 const PaloSanto = () => {
   return (
-    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+    <div className="w-full min-h-screen flex flex-wrap justify-start lg:justify-start  gap-1 ">
       {paloSantoArray.map((e, i) => (
         <CardProductCat
           key={i}
