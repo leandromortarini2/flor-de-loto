@@ -1,11 +1,11 @@
-import { sahumadosArray } from "@/app/utils/ArrayProducts/sahumado";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
+import { tejidosArray } from "@/app/utils/ArrayProducts/tejidos";
 
-const PaloSanto = () => {
+const Tejidos = () => {
   return (
-    <div className="w-full min-h-screen flex flex-wrap justify-start lg:justify-start  gap-1 lg:gap-2 ">
-      {sahumadosArray.map((e, i) => (
+    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+      {tejidosArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -18,4 +18,5 @@ const PaloSanto = () => {
     </div>
   );
 };
-export default PaloSanto;
+
+export default Tejidos;

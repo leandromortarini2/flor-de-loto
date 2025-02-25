@@ -43,19 +43,31 @@ export const navbarButton: INavbarButton[] = [
     label: "Catalogo",
     options: [
       {
-        label: "Palo Santo",
+        label: "Sahumado",
+        link: "/catalogo/Sahumado",
+      },
+      {
+        label: "Porta Sahumerios",
         link: "/catalogo",
       },
       {
-        label: "Lampara de sal",
+        label: "Cascadas de Humo",
         link: "/catalogo",
       },
       {
-        label: "Porta Sahumerio",
+        label: "Hornillo",
         link: "/catalogo",
       },
       {
-        label: "Cascada de humo",
+        label: "Tejido",
+        link: "/catalogo",
+      },
+      {
+        label: "Duendes",
+        link: "/catalogo",
+      },
+      {
+        label: "Colecciones",
         link: "/catalogo",
       },
     ],

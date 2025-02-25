@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "../../components/Button";
+import { ButtonCardCat } from "./ButtonCardCat";
 
 interface CardProductCatProps {
   image: string;
@@ -8,7 +8,6 @@ interface CardProductCatProps {
   description: string;
   linkButton: string;
   textButton: string;
-  price: number;
 }
 export const CardProductCat: React.FC<CardProductCatProps> = ({
   image,
@@ -18,7 +17,7 @@ export const CardProductCat: React.FC<CardProductCatProps> = ({
   textButton,
 }) => {
   return (
-    <div className="w-40 h-80 bg-gray-100 flex flex-col justify-evenly items-center py-1 px-2 rounded-xl shadow-md shadow-gray-300 hover:scale-105 duration-300 hover:cursor-default">
+    <div className="w-[46%] lg:w-36 h-80 bg-gray-100 flex flex-col justify-evenly items-center py-1 px-2 rounded-xl shadow-md shadow-gray-300 hover:scale-105 duration-300 hover:cursor-default">
       <Image
         src={image}
         alt={title}
@@ -28,11 +27,12 @@ export const CardProductCat: React.FC<CardProductCatProps> = ({
       />
       <h3 className="text-center font-semibold text-sm">{title}</h3>
       <p className="text-center text-xs">{description}</p>
-      <Button
+      <ButtonCardCat
         text={textButton}
         color="primary"
         link={linkButton}
         message={title}
+        size={description}
       />
     </div>
   );

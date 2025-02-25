@@ -2,22 +2,37 @@
 export const categoriesArray = [
   {
     id: 1,
-    name: "Palo Santo",
+    name: "Sahumado",
     disabledButton: false,
   },
   {
     id: 2,
-    name: "Lampara de sal",
+    name: "Porta Sahumerios",
     disabledButton: false,
   },
   {
     id: 3,
-    name: "Porta Sahumerio",
+    name: "Cascadas de humo",
     disabledButton: false,
   },
   {
     id: 4,
-    name: "Cascada de humo",
+    name: "Hornillos",
+    disabledButton: false,
+  },
+  {
+    id: 5,
+    name: "Tejido",
+    disabledButton: false,
+  },
+  {
+    id: 6,
+    name: "Duendes",
+    disabledButton: false,
+  },
+  {
+    id: 7,
+    name: "Colecciones",
     disabledButton: false,
   },
 ];

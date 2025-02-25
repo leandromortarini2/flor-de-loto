@@ -1,11 +1,11 @@
-import { sahumadosArray } from "@/app/utils/ArrayProducts/sahumado";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
+import { hornillosArray } from "@/app/utils/ArrayProducts/hornillos";
 
-const PaloSanto = () => {
+const Hornillos = () => {
   return (
-    <div className="w-full min-h-screen flex flex-wrap justify-start lg:justify-start  gap-1 lg:gap-2 ">
-      {sahumadosArray.map((e, i) => (
+    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+      {hornillosArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -14,8 +14,9 @@ const PaloSanto = () => {
           linkButton={e.link}
           textButton={e.labelButton}
         />
-      ))}
+      ))}{" "}
     </div>
   );
 };
-export default PaloSanto;
+
+export default Hornillos;

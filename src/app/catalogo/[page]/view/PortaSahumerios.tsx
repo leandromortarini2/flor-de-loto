@@ -1,14 +1,11 @@
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
-import { sahumeriosArray } from "@/app/utils/ArrayProducts/sahumerios";
+import { portaSahumeriosArray } from "@/app/utils/ArrayProducts/portaSahumerio";
 
-export const Sahumerios = () => {
+const PortaSahumerios = () => {
   return (
-    <div
-      id="sahumerios"
-      className="w-full min-h-screen flex  justify-center items-center  flex-wrap lg:justify-start  gap-4"
-    >
-      {sahumeriosArray.map((e, i) => (
+    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+      {portaSahumeriosArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -16,9 +13,10 @@ export const Sahumerios = () => {
           description={e.description}
           linkButton={e.link}
           textButton={e.labelButton}
-          price={e.price}
         />
       ))}
     </div>
   );
 };
+
+export default PortaSahumerios;
