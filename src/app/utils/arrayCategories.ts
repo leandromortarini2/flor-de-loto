@@ -17,21 +17,26 @@ export const categoriesArray = [
   },
   {
     id: 4,
-    name: "Hornillos",
+    name: "Lampara de Sal",
     disabledButton: false,
   },
   {
     id: 5,
-    name: "Tejido",
+    name: "Hornillos",
     disabledButton: false,
   },
   {
     id: 6,
-    name: "Duendes",
+    name: "Tejido",
     disabledButton: false,
   },
   {
     id: 7,
+    name: "Duendes",
+    disabledButton: false,
+  },
+  {
+    id: 8,
     name: "Colecciones",
     disabledButton: false,
   },

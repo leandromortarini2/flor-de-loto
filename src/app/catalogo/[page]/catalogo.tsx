@@ -4,7 +4,14 @@ import { categoriesArray } from "../../utils/arrayCategories";
 import Image from "next/image";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
-import { Cascadas, Duendes, Hornillos, PortaSahumerios } from "./view"; //aca se estan importando las vistas desde la carpeta view ya que todas estan exportadas por default desde index.ts
+import {
+  Cascadas,
+  Colecciones,
+  Duendes,
+  Hornillos,
+  LamparadeSal,
+  PortaSahumerios,
+} from "./view"; //aca se estan importando las vistas desde la carpeta view ya que todas estan exportadas por default desde index.ts
 import LotoLoader from "@/app/components/Loader";
 import { Sahumado } from "./view/Sahumado";
 import { WhatsappButton } from "@/app/components/WhatsappButton/WhatsappButton";
@@ -17,7 +24,8 @@ const viewComponents: { [key: string]: React.ReactNode } = {
   Hornillos: <Hornillos />,
   Tejido: <Tejidos />,
   Duendes: <Duendes />,
-  // Colecciones: <PortaSahumerio />,
+  Colecciones: <Colecciones />,
+  "Lampara de Sal": <LamparadeSal />,
 };
 
 const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {

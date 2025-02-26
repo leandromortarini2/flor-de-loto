@@ -48,27 +48,31 @@ export const navbarButton: INavbarButton[] = [
       },
       {
         label: "Porta Sahumerios",
-        link: "/catalogo",
+        link: "/catalogo/Porta%20Sahumerios",
       },
       {
         label: "Cascadas de Humo",
-        link: "/catalogo",
+        link: "/catalogo/Cascadas%20de%20humo",
+      },
+      {
+        label: "Lampara de Sal",
+        link: "/catalogo/Lampara%20de%20Sal",
       },
       {
         label: "Hornillo",
-        link: "/catalogo",
+        link: "/catalogo/Hornillo",
       },
       {
         label: "Tejido",
-        link: "/catalogo",
+        link: "/catalogo/Tejido",
       },
       {
         label: "Duendes",
-        link: "/catalogo",
+        link: "/catalogo/Duendes",
       },
       {
         label: "Colecciones",
-        link: "/catalogo",
+        link: "/catalogo/Colecciones",
       },
     ],
   },
@@ -108,7 +112,7 @@ export const navbarButtonMovile = [
   },
   {
     label: "Catalogo",
-    link: "/catalogo/Palo%20Santo",
+    link: "/catalogo/Sahumado",
   },
   {
     label: "Contacto",
