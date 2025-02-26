@@ -100,7 +100,7 @@ export const ProductCard: React.FC<IProductCard> = ({
               color="primary"
               link={link}
               title={title}
-              classButton=""
+              classButton="capitalize"
             />
           </div>
         </div>
