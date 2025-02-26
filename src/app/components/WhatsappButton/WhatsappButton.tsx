@@ -6,7 +6,7 @@ import React from "react";
 
 export const WhatsappButton: React.FC = () => {
   const handleClick = () => {
-    whstappRedirection("");
+    whstappRedirection("", "");
   };
 
   return (

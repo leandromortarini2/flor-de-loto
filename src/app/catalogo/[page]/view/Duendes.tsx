@@ -1,11 +1,11 @@
-import { lamparaSalArray } from "@/app/utils/ArrayProducts/lamparaSal";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
+import { duendesArray } from "@/app/utils/ArrayProducts/duendes";
 
-const LamparaSal = () => {
+const Tejidos = () => {
   return (
     <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
-      {lamparaSalArray.map((e, i) => (
+      {duendesArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -13,11 +13,10 @@ const LamparaSal = () => {
           description={e.description}
           linkButton={e.link}
           textButton={e.labelButton}
-          price={e.price}
         />
-      ))}{" "}
+      ))}
     </div>
   );
 };
 
-export default LamparaSal;
+export default Tejidos;

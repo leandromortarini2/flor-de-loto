@@ -1,11 +1,11 @@
-import { paloSantoArray } from "@/app/utils/ArrayProducts/paloSanto";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
+import { portaSahumeriosArray } from "@/app/utils/ArrayProducts/portaSahumerio";
 
-const PaloSanto = () => {
+const PortaSahumerios = () => {
   return (
-    <div className="w-full min-h-screen flex flex-wrap justify-start lg:justify-start  gap-1 ">
-      {paloSantoArray.map((e, i) => (
+    <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
+      {portaSahumeriosArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -13,10 +13,10 @@ const PaloSanto = () => {
           description={e.description}
           linkButton={e.link}
           textButton={e.labelButton}
-          price={e.price}
         />
       ))}
     </div>
   );
 };
-export default PaloSanto;
+
+export default PortaSahumerios;

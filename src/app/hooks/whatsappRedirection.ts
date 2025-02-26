@@ -1,7 +1,10 @@
 // import { toast } from "sonner";
 import Swal from "sweetalert2";
 
-export const whstappRedirection = (message: string | undefined) => {
+export const whstappRedirection = (
+  message: string | undefined,
+  size: string | undefined
+) => {
   Swal.fire({
     title: `Serás redirigido a WhatsApp`,
     icon: "warning",
@@ -14,7 +17,7 @@ export const whstappRedirection = (message: string | undefined) => {
     if (result.isConfirmed) {
       if (message) {
         window.open(
-          `https://wa.me/+5401122883245?text=Hola Flor de Loto! quiero pedirte: ${message}`,
+          `https://wa.me/+5401122883245?text=Hola Flor de Loto! quiero pedirte: ${message} (${size})`,
           "_blank"
         );
       } else {

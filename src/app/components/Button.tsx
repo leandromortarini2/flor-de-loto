@@ -28,7 +28,8 @@ export const Button: React.FC<IProp> = ({
     message?: string | undefined;
   }) => {
     if (label === "Pedir") {
-      whstappRedirection(message);
+      const size = "";
+      whstappRedirection(message, size);
     }
   };
   return (

@@ -23,10 +23,7 @@ export const ButtonNavbar: React.FC<INavbarButton> = ({
     if (handle) handle("");
 
     // Si es del dropdown "Categorías", se concatena el título a la URL
-    const finalLink =
-      labelDad === "Catalogo" && link
-        ? `${link}?product=${encodeURIComponent(label)}`
-        : link || "/";
+    const finalLink = labelDad === "Catalogo" && link ? `${link}` : link || "/";
 
     alertNavbar({ label, finalLink, labelDad });
   };

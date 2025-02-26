@@ -1,11 +1,11 @@
-import { portaSahumeriosArray } from "@/app/utils/ArrayProducts/portaSahumerio";
 import React from "react";
 import { CardProductCat } from "../CardProductCat";
+import { lamparaSalArray } from "@/app/utils/ArrayProducts/lamparaSal";
 
-const PortaSahumerio = () => {
+const LamparadeSal = () => {
   return (
     <div className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 ">
-      {portaSahumeriosArray.map((e, i) => (
+      {lamparaSalArray.map((e, i) => (
         <CardProductCat
           key={i}
           image={e.image}
@@ -13,11 +13,10 @@ const PortaSahumerio = () => {
           description={e.description}
           linkButton={e.link}
           textButton={e.labelButton}
-          price={e.price}
         />
       ))}
     </div>
   );
 };
 
-export default PortaSahumerio;
+export default LamparadeSal;

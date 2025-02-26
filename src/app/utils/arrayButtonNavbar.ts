@@ -43,20 +43,36 @@ export const navbarButton: INavbarButton[] = [
     label: "Catalogo",
     options: [
       {
-        label: "Palo Santo",
-        link: "/catalogo",
+        label: "Sahumado",
+        link: "/catalogo/Sahumado",
       },
       {
-        label: "Lampara de sal",
-        link: "/catalogo",
+        label: "Porta Sahumerios",
+        link: "/catalogo/Porta%20Sahumerios",
       },
       {
-        label: "Porta Sahumerio",
-        link: "/catalogo",
+        label: "Cascadas de Humo",
+        link: "/catalogo/Cascadas%20de%20humo",
       },
       {
-        label: "Cascada de humo",
-        link: "/catalogo",
+        label: "Lampara de Sal",
+        link: "/catalogo/Lampara%20de%20Sal",
+      },
+      {
+        label: "Hornillo",
+        link: "/catalogo/Hornillo",
+      },
+      {
+        label: "Tejido",
+        link: "/catalogo/Tejido",
+      },
+      {
+        label: "Duendes",
+        link: "/catalogo/Duendes",
+      },
+      {
+        label: "Colecciones",
+        link: "/catalogo/Colecciones",
       },
     ],
   },
@@ -96,7 +112,7 @@ export const navbarButtonMovile = [
   },
   {
     label: "Catalogo",
-    link: "/catalogo/Palo%20Santo",
+    link: "/catalogo/Sahumado",
   },
   {
     label: "Contacto",
