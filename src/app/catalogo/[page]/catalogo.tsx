@@ -13,7 +13,6 @@ import {
   LamparadeSal,
   PortaSahumerios,
 } from "./view"; //aca se estan importando las vistas desde la carpeta view ya que todas estan exportadas por default desde index.ts
-import LotoLoader from "@/app/components/Loader";
 import { Sahumado } from "./view/Sahumado";
 import { WhatsappButton } from "@/app/components/WhatsappButton/WhatsappButton";
 import Tejidos from "./view/Tejidos";
@@ -34,20 +33,11 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
   const [openView, setOpenView] = useState<string>("");
   console.log(page);
   const [focusButton, setFocusButton] = useState<boolean>(false);
-  const [loader, setLoader] = useState<boolean>(false);
   const handleOpenView = (cat: string) => {
     if (cat) {
       setOpenView(cat);
     }
   };
-
-  useEffect(() => {
-    setLoader(true);
-
-    setTimeout(() => {
-      setLoader(false);
-    }, 1000);
-  }, [openView]);
 
   useEffect(() => {
     const productName = decodeURIComponent(page); // Capturar el nombre del producto
@@ -116,9 +106,7 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
       </div>
       <div className="p-4 sm:ml-64">
         <div className="p-4">
-          {loader ? (
-            <LotoLoader />
-          ) : openView && viewComponents[openView] ? (
+          {openView && viewComponents[openView] ? (
             viewComponents[openView]
           ) : (
             <h1>Selecciona una categoría del catálogo</h1>
