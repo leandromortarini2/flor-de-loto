@@ -12,7 +12,8 @@ export const Products: React.FC = () => {
         <ProductCard
           key={product.id}
           img={product.image}
-          title={product.name}
+          name={product.name}
+          view={product.view}
           description={product.description}
           link={product.link}
           label={product.labelButton}

@@ -19,19 +19,19 @@ import Tejidos from "./view/Tejidos";
 
 const viewComponents: { [key: string]: React.ReactNode } = {
   Sahumado: <Sahumado />,
-  "Porta Sahumerios": <PortaSahumerios />,
-  "Cascadas de humo": <Cascadas />,
-  Hornillos: <Hornillos />,
+  Porta: <PortaSahumerios />,
+  Cascadas: <Cascadas />,
+  Hornillo: <Hornillos />,
   Tejido: <Tejidos />,
-  Duendes: <Duendes />,
+  Duende: <Duendes />,
   Colecciones: <Colecciones />,
-  "Lampara de Sal": <LamparadeSal />,
+  Lampara: <LamparadeSal />,
 };
 
 const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
   const { page } = use(params);
   const [openView, setOpenView] = useState<string>("");
-  console.log(page);
+
   const [focusButton, setFocusButton] = useState<boolean>(false);
   const handleOpenView = (cat: string) => {
     if (cat) {

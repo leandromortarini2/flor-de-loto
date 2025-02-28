@@ -7,22 +7,22 @@ export const categoriesArray = [
   },
   {
     id: 2,
-    name: "Porta Sahumerios",
+    name: "Porta",
     disabledButton: false,
   },
   {
     id: 3,
-    name: "Cascadas de humo",
+    name: "Cascadas",
     disabledButton: false,
   },
   {
     id: 4,
-    name: "Lampara de Sal",
+    name: "Lampara",
     disabledButton: false,
   },
   {
     id: 5,
-    name: "Hornillos",
+    name: "Hornillo",
     disabledButton: false,
   },
   {
@@ -32,7 +32,7 @@ export const categoriesArray = [
   },
   {
     id: 7,
-    name: "Duendes",
+    name: "Duende",
     disabledButton: false,
   },
   {

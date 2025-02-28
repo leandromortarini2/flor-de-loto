@@ -5,20 +5,22 @@ import { Button } from "../Button";
 import { useRotate } from "@/app/hooks/useRotate";
 interface IProductCard {
   img: string;
-  title: string;
+  name: string;
   description: string;
   link: string;
   label: string;
   direction: string;
+  view: string;
 }
 
 export const ProductCard: React.FC<IProductCard> = ({
   img,
-  title,
+  name,
   description,
   link,
   label,
   direction,
+  view,
 }) => {
   const rotateScreen = useRotate();
   return (
@@ -38,7 +40,7 @@ export const ProductCard: React.FC<IProductCard> = ({
       >
         <Image
           src={img}
-          alt={title}
+          alt={name}
           width={300}
           height={300}
           className="w-1/2"
@@ -54,7 +56,7 @@ export const ProductCard: React.FC<IProductCard> = ({
         <div className="w-3/4 md:w-3/5 lg:w-2/3 min-h-72  flex flex-col justify-evenly tracking-widest ">
           <div className={`w-full flex justify-center lg:justify-start`}>
             <h2 className="font-textSecondary text-2xl lg:text-3xl 2xl:text-4xl text-violet">
-              {title}
+              {name}
             </h2>
           </div>
 
@@ -67,7 +69,7 @@ export const ProductCard: React.FC<IProductCard> = ({
           >
             <Image
               src={img}
-              alt={title}
+              alt={name}
               width={300}
               height={300}
               className={`${
@@ -95,7 +97,7 @@ export const ProductCard: React.FC<IProductCard> = ({
               text={label}
               color="primary"
               link={link}
-              title={title}
+              view={view}
               classButton="capitalize text-sm lg:w-52 h-8 lg:h-10 lg:text-lg"
             />
           </div>
