@@ -2,7 +2,8 @@ export const tejidosArray = [
   {
     id: 1,
     name: "Atrapasueños de Mesa",
-    description: "Tamaño: Grande",
+    description: "Metal y Lana",
+    size: "Grande",
     image: "https://i.imgur.com/9QHV38o.jpeg",
     labelButton: "Pedir",
     link: "",
@@ -10,7 +11,8 @@ export const tejidosArray = [
   {
     id: 2,
     name: "Atrapasueños Grande",
-    description: "Tamaño: Grande",
+    description: " Lana",
+    size: "Grande",
     image: "https://i.imgur.com/sp5LZIy.jpeg",
     labelButton: "Pedir",
     link: "",
@@ -18,7 +20,8 @@ export const tejidosArray = [
   {
     id: 3,
     name: "Atrapasueños",
-    description: "Tamaño: Chico",
+    description: "Lana",
+    size: "Mediano",
     image: "https://i.imgur.com/sdRzo9C.jpeg",
     labelButton: "Pedir",
     link: "",
@@ -26,7 +29,8 @@ export const tejidosArray = [
   {
     id: 4,
     name: "Atrapasueños",
-    description: "Tamaño: Chico",
+    description: "Lana y tela",
+    size: "Mediano",
     image: "https://i.imgur.com/R9IuwLm.jpeg",
     labelButton: "Pedir",
     link: "",
@@ -34,7 +38,8 @@ export const tejidosArray = [
   {
     id: 5,
     name: "Atrapasueños",
-    description: "Tamaño: Chico",
+    description: "Lana y tela",
+    size: "Mediano",
     image: "https://i.imgur.com/FW5cb91.jpeg",
     labelButton: "Pedir",
     link: "",
@@ -42,7 +47,8 @@ export const tejidosArray = [
   {
     id: 6,
     name: "Atrapasueños",
-    description: "Tamaño: Chico",
+    description: "Lana",
+    size: "Mediano",
     image: "https://i.imgur.com/TP0kbS0.jpeg",
     labelButton: "Pedir",
     link: "",
