@@ -19,7 +19,7 @@ export default function Home() {
 
         <div
           id="hero"
-          className="w-full min-h-screen relative z-10 text-center  "
+          className="w-full min-h-screen relative z-20 text-center  "
         >
           <Navbar />
           <div className="w-full h-screen  md:h-auto  flex justify-center items-start xl:items-center lg:overflow-y-hidden relative  ">
@@ -32,11 +32,12 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <About />
+          <Products />
+          <WhatsappButton />
+          <Footer />
         </div>
-        <About />
-        <Products />
-        <WhatsappButton />
-        <Footer />
       </div>
     </>
   );

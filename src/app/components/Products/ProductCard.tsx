@@ -51,56 +51,52 @@ export const ProductCard: React.FC<IProductCard> = ({
             : "items-center lg:items-end"
         }`}
       >
-        <h1 className="font-textSecondary text-2xl lg:text-3xl text-violet">
-          {title}
-        </h1>
-        <div
-          className={`w-full lg:w-2/5 flex  lg:hidden ${
-            direction == "right"
-              ? " justify-center lg:justify-end"
-              : "justify-center lg:justify-start"
-          } `}
-        >
-          <Image
-            src={img}
-            alt={title}
-            width={300}
-            height={300}
-            className={`${
-              rotateScreen ? "w-1/3 md:w-3/6" : "w-3/4  md:w-3/5"
-            } `}
-          />
-        </div>
-        <div className="w-3/4 md:w-3/5 lg:w-2/3">
+        <div className="w-3/4 md:w-3/5 lg:w-2/3 min-h-72  flex flex-col justify-evenly tracking-widest ">
+          <div className={`w-full flex justify-center lg:justify-start`}>
+            <h2 className="font-textSecondary text-2xl lg:text-3xl 2xl:text-4xl text-violet">
+              {title}
+            </h2>
+          </div>
+
           <div
-            className={`w-full flex ${
-              direction == "right" ? "justify-start" : "justify-end"
+            className={`w-full lg:w-2/5 flex  lg:hidden my-4 lg:my-0 ${
+              direction == "right"
+                ? " justify-center lg:justify-end"
+                : "justify-center lg:justify-start"
+            } `}
+          >
+            <Image
+              src={img}
+              alt={title}
+              width={300}
+              height={300}
+              className={`${
+                rotateScreen ? "w-1/3 md:w-3/6" : "w-3/4  md:w-3/5"
+              } `}
+            />
+          </div>
+
+          <div
+            className={`w-full flex my-4 lg:my-0 ${
+              direction == "right" ? "justify-start" : "justify-start"
             }`}
           >
             <p
-              className={`w-full lg:w-3/4  text-base  md:text-lg ${
-                direction == "right"
-                  ? "text-start lg:text-start"
-                  : "text-start lg:text-end"
-              }`}
+              className={`w-full lg:w-3/4  text-base  md:text-xl  text-start tracking-wide`}
             >
               {description}
             </p>
           </div>
 
           <div
-            className={`w-full flex my-4  ${
-              direction == "right"
-                ? "justify-end lg:justify-start"
-                : "justify-end lg:justify-end"
-            }`}
+            className={`w-full flex justify-end lg:justify-start my-4 lg:my-0 `}
           >
             <Button
               text={label}
               color="primary"
               link={link}
               title={title}
-              classButton="capitalize"
+              classButton="capitalize text-sm lg:w-52 h-8 lg:h-10 lg:text-lg"
             />
           </div>
         </div>
