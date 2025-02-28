@@ -11,8 +11,7 @@ const Tejidos = () => {
           image={e.image}
           title={e.name}
           description={e.description}
-          linkButton={e.link}
-          textButton={e.labelButton}
+          size={e.size}
         />
       ))}
     </div>

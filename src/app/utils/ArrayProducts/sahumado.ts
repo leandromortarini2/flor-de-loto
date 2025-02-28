@@ -2,18 +2,18 @@ export const sahumadosArray = [
   {
     id: 1,
     name: "Sahumerios",
-    description:
-      "Sahumerios de triple empaste, elaborados con una fragancia intensa y duradera.",
+    description: "Triple empaste, y con una fragancia duradera",
     image: "https://i.imgur.com/B4ziSkr.jpeg",
+    size: "Sin especificar",
     labelButton: "Pedir",
     link: "",
   },
   {
     id: 1,
     name: "Bombas de defumación activa",
-    description:
-      "Bombas de defumación que liberan un aroma , creando un ambiente armonioso.",
+    description: "Sin especificar",
     image: "https://i.imgur.com/JSy6eQA.jpeg",
+    size: "Sin especificar",
     labelButton: "Pedir",
     link: "",
   },
@@ -28,18 +28,29 @@ export const sahumadosArray = [
   {
     id: 1,
     name: "Conitos",
-    description:
-      "Sahumerios en cono con una fragancia duradera, ideales para un ambiente relajante.",
+    description: "Sin especificar",
     image: "https://i.imgur.com/SvGuLcA.jpeg",
     labelButton: "Pedir",
+    size: "Sin especificar",
+
     link: "",
   },
   {
     id: 1,
     name: "Palo Santo",
-    description:
-      "Ayuda a limpiar y purificar el ambiente, creando una profunda sensación de armonía.",
+    description: "Bursera graveolens",
     image: "https://i.imgur.com/gSJg3Oi.jpeg",
+    size: "Sin especificar",
+
+    labelButton: "Pedir",
+    link: "",
+  },
+  {
+    id: 1,
+    name: "Cazuelas",
+    description: "Yeso pintado",
+    image: "https://i.imgur.com/C8Aws7F.jpeg",
+    size: "Sin especificar",
     labelButton: "Pedir",
     link: "",
   },

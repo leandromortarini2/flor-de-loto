@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { use, useEffect, useState } from "react";
 import { categoriesArray } from "../../utils/arrayCategories";
@@ -125,9 +126,9 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
         </div>
       </div>
 
-      <div className="w-full   h-20 flex justify-center items-center sticky bottom-0 lg:hidden">
+      <div className="w-full   h-20 flex justify-center items-center sticky bottom-0 lg:hidden z-20">
         <Link href="/#products" className="w-full  h-full text-white">
-          <button className="w-1/3 rounded-t-3xl rounded-l-none bg-red-500 hover:bg-red-700 h-full text-white flex justify-center gap-1 items-center font-bold tracking-widest">
+          <button className="w-1/3 rounded-t-3xl rounded-l-none bg-red-500 hover:bg-red-700 h-full text-white flex justify-center gap-1 items-center font-bold tracking-widest ">
             <BiArrowBack />
             Volver
           </button>
