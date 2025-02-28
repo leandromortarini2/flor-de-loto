@@ -48,15 +48,15 @@ export const navbarButton: INavbarButton[] = [
       },
       {
         label: "Porta Sahumerios",
-        link: "/catalogo/Porta%20Sahumerios",
+        link: "/catalogo/Porta",
       },
       {
         label: "Cascadas de Humo",
-        link: "/catalogo/Cascadas%20de%20humo",
+        link: "/catalogo/Cascadas",
       },
       {
         label: "Lampara de Sal",
-        link: "/catalogo/Lampara%20de%20Sal",
+        link: "/catalogo/Lampara",
       },
       {
         label: "Hornillo",
@@ -68,7 +68,7 @@ export const navbarButton: INavbarButton[] = [
       },
       {
         label: "Duendes",
-        link: "/catalogo/Duendes",
+        link: "/catalogo/Duende",
       },
       {
         label: "Colecciones",
