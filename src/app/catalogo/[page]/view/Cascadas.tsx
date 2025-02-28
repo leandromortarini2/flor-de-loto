@@ -6,7 +6,7 @@ const Cascadas = () => {
   return (
     <div
       id="cascadas"
-      className="w-full min-h-screen flex flex-wrap justify-center lg:justify-start  gap-4 "
+      className="w-full min-h-screen flex flex-wrap justify-center md:justify-evenly lg:justify-start  gap-4   "
     >
       {cascadasArray.map((e, i) => (
         <CardProductCat

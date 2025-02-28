@@ -104,7 +104,7 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
         <Image src={"/flordelotoicon.svg"} alt="logo" width={30} height={30} />
         Flor de loto
       </div>
-      <div className="p-4 sm:ml-64">
+      <div className="p-4 lg:ml-64 lg:p-0  w-auto">
         <div className="p-4">
           {openView && viewComponents[openView] ? (
             viewComponents[openView]
