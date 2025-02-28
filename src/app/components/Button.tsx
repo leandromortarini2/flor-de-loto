@@ -8,7 +8,7 @@ interface IProp {
   classButton?: string;
   link: string;
   message?: string | undefined;
-  title?: string;
+  view?: string;
 }
 
 export const Button: React.FC<IProp> = ({
@@ -18,7 +18,7 @@ export const Button: React.FC<IProp> = ({
   classButton,
   link,
   message,
-  title,
+  view,
 }) => {
   const handleOnCkick = ({
     label,
@@ -34,8 +34,8 @@ export const Button: React.FC<IProp> = ({
   };
   return (
     <>
-      {title ? (
-        <Link href={`${link}/${title}`}>
+      {view ? (
+        <Link href={`${link}/${view}`}>
           <button
             className={`rounded-xl flex justify-center items-center  px-3 py-1 text-base   font-textSecondary ${
               color === "primary"
