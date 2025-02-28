@@ -41,7 +41,7 @@ export const CardProductCat: React.FC<CardProductCatProps> = ({
       </div>
       <div className="w-full flex justify-center items-end pb-2 h-full">
         <button
-          onClick={() => handleWP(description, size)}
+          onClick={() => handleWP(title, size)}
           className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group"
           type="button"
         >
