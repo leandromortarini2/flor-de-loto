@@ -15,16 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Flor de Loto",
   description: "Aromas y colores para tu hogar",
+  manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/icon-192x192.png",
-    other: [
-      {
-        rel: "icon",
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
+    apple: "/icon512_rounded.png",
   },
 };
 
@@ -35,7 +28,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {" "}
       <head>
         <link rel="manifest" href="/manifest.json" />
       </head>
