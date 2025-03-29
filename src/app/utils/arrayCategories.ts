@@ -40,4 +40,9 @@ export const categoriesArray = [
     name: "Colecciones",
     disabledButton: false,
   },
+  {
+    id: 9,
+    name: "Lentes",
+    disabledButton: false,
+  },
 ];
