@@ -16,6 +16,7 @@ import {
 import { Sahumado } from "./view/Sahumado";
 import { WhatsappButton } from "@/app/components/WhatsappButton/WhatsappButton";
 import Tejidos from "./view/Tejidos";
+import Anteojos from "./view/Anteojos";
 
 const viewComponents: { [key: string]: React.ReactNode } = {
   Sahumado: <Sahumado />,
@@ -26,6 +27,7 @@ const viewComponents: { [key: string]: React.ReactNode } = {
   Duende: <Duendes />,
   Colecciones: <Colecciones />,
   Lampara: <LamparadeSal />,
+  Lentes: <Anteojos />,
 };
 
 const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
@@ -41,6 +43,7 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
 
   useEffect(() => {
     const productName = decodeURIComponent(page); // Capturar el nombre del producto
+    console.log(productName);
     if (productName) {
       setOpenView(productName);
       setFocusButton(true);
@@ -100,10 +103,14 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
           </ul>
         </div>
       </aside>
+
+      {/* logo visible en celular */}
       <div className="w-full bg-violetOscuro text-white h-12 flex justify-center items-center lg:hidden">
         <Image src={"/flordelotoicon.svg"} alt="logo" width={30} height={30} />
         Flor de loto
       </div>
+
+      {/* contenido */}
       <div className="p-4 lg:ml-64 lg:p-0  w-auto">
         <div className="p-4">
           {openView && viewComponents[openView] ? (
@@ -114,6 +121,7 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
         </div>
       </div>
 
+      {/* boton de volver visible en celular */}
       <div className="w-full   h-20 flex justify-center items-center sticky bottom-0 lg:hidden z-20">
         <Link href="/#products" className="w-full  h-full text-white">
           <button className="w-1/3 rounded-t-3xl rounded-l-none bg-red-500 hover:bg-red-700 h-full text-white flex justify-center gap-1 items-center font-bold tracking-widest ">

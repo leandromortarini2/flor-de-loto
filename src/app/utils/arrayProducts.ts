@@ -88,4 +88,15 @@ export const products = [
     labelButton: "Ver catálogo",
     direction: "left",
   },
+  {
+    id: 9,
+    name: "Lentes de Sol",
+    view: "Lentes",
+    description:
+      "Hermosos lentes de sol, tenemos modelos para adultos y chicos, con un diseño moderno. ¡Ideales para cada salida al sol! ",
+    image: "https://i.imgur.com/59vPKXJ.jpeg",
+    link: "/catalogo",
+    labelButton: "Ver catálogo",
+    direction: "right",
+  },
 ];
