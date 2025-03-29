@@ -74,6 +74,10 @@ export const navbarButton: INavbarButton[] = [
         label: "Colecciones",
         link: "/catalogo/Colecciones",
       },
+      {
+        label: "Lentes de Sol",
+        link: "/catalogo/Lentes",
+      },
     ],
   },
   {
