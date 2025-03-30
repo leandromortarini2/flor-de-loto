@@ -18,7 +18,7 @@ export const CardProductCat: React.FC<CardProductCatProps> = ({
     whstappRedirection(menssage, size);
   };
   return (
-    <div className=" w-[300px] lg:w-[250px] lg:h-[450px] xl:h-[500px] xl:w-[300px] flex flex-col gap-2 border-2 p-2 shadow-xl">
+    <div className=" w-[300px] max-h-[490px]  lg:w-[250px] lg:h-[450px] xl:h-[500px] xl:w-[300px] flex flex-col gap-2 border-2 p-2 shadow-xl">
       <div>
         <Image
           src={image}
