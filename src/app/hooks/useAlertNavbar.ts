@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 
-// para redirecciones donde puede ser que deba llevar al catalogo sin necesidad de abrir una nueva pestaña
 export const alertNavbar = ({
   label,
   finalLink,
@@ -19,7 +18,7 @@ export const alertNavbar = ({
     confirmButtonText: "Aceptar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
-    if (result.isConfirmed) {
+    if (result.isConfirmed && typeof window !== "undefined") {
       if (labelDad !== "Catalogo") {
         window.open(finalLink, "_blank");
       } else {

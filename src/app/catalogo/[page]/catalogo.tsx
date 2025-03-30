@@ -17,6 +17,7 @@ import { Sahumado } from "./view/Sahumado";
 import { WhatsappButton } from "@/app/components/WhatsappButton/WhatsappButton";
 import Tejidos from "./view/Tejidos";
 import Anteojos from "./view/Anteojos";
+import { Select } from "@/app/components/Select";
 
 const viewComponents: { [key: string]: React.ReactNode } = {
   Sahumado: <Sahumado />,
@@ -43,7 +44,6 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
 
   useEffect(() => {
     const productName = decodeURIComponent(page); // Capturar el nombre del producto
-    console.log(productName);
     if (productName) {
       setOpenView(productName);
       setFocusButton(true);
@@ -105,10 +105,27 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
       </aside>
 
       {/* logo visible en celular */}
-      <div className="w-full bg-violetOscuro text-white h-12 flex justify-center items-center lg:hidden">
-        <Image src={"/flordelotoicon.svg"} alt="logo" width={30} height={30} />
-        Flor de loto
+      <div className="w-full bg-violetOscuro text-white h-12 flex justify-between px-10 items-center sticky top-0 z-20 lg:hidden">
+        <div className="flex">
+          <Image
+            src={"/flordelotoicon.svg"}
+            alt="logo"
+            width={30}
+            height={30}
+          />
+          Flor de loto
+        </div>
+        <div className="w-24    h-7 flex justify-center items-center  lg:hidden z-20">
+          <Link href="/#products" className="w-full  h-full text-white">
+            <button className="w-full rounded-xl bg-red-500 hover:bg-red-700  text-sm h-full text-white flex justify-center gap-1 items-center  tracking-widest ">
+              <BiArrowBack />
+              Volver
+            </button>
+          </Link>
+        </div>
       </div>
+
+      <Select options={categoriesArray} handle={handleOpenView} />
 
       {/* contenido */}
       <div className="p-4 lg:ml-64 lg:p-0  w-auto">
@@ -122,14 +139,14 @@ const Catalogo = ({ params }: { params: Promise<{ page: string }> }) => {
       </div>
 
       {/* boton de volver visible en celular */}
-      <div className="w-full   h-20 flex justify-center items-center sticky bottom-0 lg:hidden z-20">
+      {/* <div className="w-full   h-20 flex justify-center items-center sticky bottom-0 lg:hidden z-20">
         <Link href="/#products" className="w-full  h-full text-white">
           <button className="w-1/3 rounded-t-3xl rounded-l-none bg-red-500 hover:bg-red-700 h-full text-white flex justify-center gap-1 items-center font-bold tracking-widest ">
             <BiArrowBack />
             Volver
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
