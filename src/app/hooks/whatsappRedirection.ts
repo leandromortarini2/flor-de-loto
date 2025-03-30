@@ -14,18 +14,14 @@ export const whstappRedirection = (
     confirmButtonText: "Aceptar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
-    if (result.isConfirmed) {
-      if (message) {
-        window.open(
-          `https://wa.me/+5401122883245?text=Hola Flor de Loto! quiero pedirte: ${message} (${size})`,
-          "_blank"
-        );
-      } else {
-        window.open(
-          "https://wa.me/+5401122883245?text=Hola Flor de Loto!",
-          "_blank"
-        );
-      }
+    if (result.isConfirmed && typeof window !== "undefined") {
+      const baseURL = "https://wa.me/+5401122883245?text=";
+      const defaultText = "Hola Flor de Loto!";
+      const fullText = message
+        ? `${defaultText} quiero pedirte: ${message} (${size})`
+        : defaultText;
+
+      window.open(`${baseURL}${encodeURIComponent(fullText)}`, "_blank");
     }
   });
 };

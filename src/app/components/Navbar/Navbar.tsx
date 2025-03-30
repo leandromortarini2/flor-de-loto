@@ -21,6 +21,8 @@ export const Navbar = () => {
     setOpenMenuMovile(!openMenuMovile);
   };
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
