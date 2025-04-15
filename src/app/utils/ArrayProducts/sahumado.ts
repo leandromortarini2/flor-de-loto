@@ -9,7 +9,7 @@ export const sahumadosArray = [
     link: "",
   },
   {
-    id: 1,
+    id: 2,
     name: "Bombas de defumación activa",
     description: "Sin especificar",
     image: "https://i.imgur.com/JSy6eQA.jpeg",
@@ -18,7 +18,7 @@ export const sahumadosArray = [
     link: "",
   },
   // {
-  //   id: 1,
+  //   id: 3,
   //   name: "Sahumos",
   //   description: "Sahumerios de triple empaste, y con una fragancia duradera",
   //   image: "",
@@ -26,27 +26,25 @@ export const sahumadosArray = [
   //   link: "",
   // },
   {
-    id: 1,
+    id: 4,
     name: "Conitos",
     description: "Sin especificar",
     image: "https://i.imgur.com/SvGuLcA.jpeg",
     labelButton: "Pedir",
     size: "Sin especificar",
-
     link: "",
   },
   {
-    id: 1,
+    id: 5,
     name: "Palo Santo",
     description: "Bursera graveolens",
     image: "https://i.imgur.com/gSJg3Oi.jpeg",
     size: "Sin especificar",
-
     labelButton: "Pedir",
     link: "",
   },
   {
-    id: 1,
+    id: 6,
     name: "Cazuelas",
     description: "Yeso pintado",
     image: "https://i.imgur.com/C8Aws7F.jpeg",
@@ -55,7 +53,7 @@ export const sahumadosArray = [
     link: "",
   },
   // {
-  //   id: 1,
+  //   id: 7,
   //   name: "Carbon Vegetal",
   //   description: "Sahumerios de triple empaste, y con una fragancia duradera",
   //   image: "",
